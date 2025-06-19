@@ -15,3 +15,17 @@ html, body {
   background-attachment: fixed; /* Keeps it in place while scrolling */
 
 }
+
+
+.canvas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid red;
+  height: 100vh;
+}
+
+.griditem {
+  border: 1px solid black;
+  padding: 1em;
+}
+
