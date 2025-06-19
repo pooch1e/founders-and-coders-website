@@ -1,31 +1,80 @@
-html, body {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0; 
-  width: 100%; 
-  height: 100%; 
-  font-family: "SF Pro Text", 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', Inter, 'Helvetica Neue', sans-serif;
-  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="%23FF0000" stroke="%23FF0000" stroke-width="2"></circle></svg>') 12 12, auto;
-  
-  
-  /* texture attempts */
-  background-image: url('/portfolio/Assets/images/scan_texture.jpg'); 
-  background-size: cover; 
-  background-repeat: no-repeat; 
-  background-attachment: fixed; /* Keeps it in place while scrolling */
-
+:root {
+  --left-frame-col: #ebe4ce;
+  --right-frame-col: #a5c067;
+  --border-debug: 1px solid black;
 }
 
+html,
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'SF Pro Text', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+    'Open Sans', Inter, 'Helvetica Neue', sans-serif;
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="%23FF0000" stroke="%23FF0000" stroke-width="2"></circle></svg>')
+      12 12,
+    auto;
+
+  /* texture attempts */
+  background-image: url('/portfolio/Assets/images/scan_texture.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Keeps it in place while scrolling */
+}
 
 .canvas {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   height: 100vh;
 }
 
 .griditem {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   padding: 1em;
 }
+
+.left-frame {
+  background-color: var(--left-frame-col);
+  
+}
+
+.right-frame {
+  background-color: var(--right-frame-col);
+}
+
+/* Right side */
+
+/* title */
+#title {
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  padding: 0;
+  /* border: var(--border-debug); */
+  
+}
+
+#title > h1 {
+  margin: auto;
+  /* border: var(--border-debug); */
+}
+
+.about-me-container {
+  display: flex;
+  flex-direction: column;
+  
+  text-align: justify;
+  /* border: var(--border-debug); */
+  margin-top: 5rem;
+  width: 65%;
+  margin-left: auto;
+  padding-right: 2rem;
+  
+  
+}
+
+
 
