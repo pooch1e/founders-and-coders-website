@@ -38,7 +38,6 @@ body {
 
 .left-frame {
   background-color: var(--left-frame-col);
-  
 }
 
 .right-frame {
@@ -50,32 +49,30 @@ body {
 /* title */
 #title {
   display: flex;
-  
+
   font-size: 2rem;
   padding: 0;
-  /* border: var(--border-debug); */
+  border: var(--border-debug);
   width: 70%;
   margin-left: auto;
-  
 }
 
 #title > h1 {
   font-style: normal;
   font-weight: 280;
-  /* border: var(--border-debug); */
+  border: var(--border-debug);
 }
 /* About me */
 .about-me-container {
   display: flex;
   flex-direction: column;
-  
+
   text-align: justify;
-  /* border: var(--border-debug); */
+  border: var(--border-debug);
   margin-top: 5rem;
   width: 65%;
   margin-left: auto;
   padding-right: 2rem;
-  
 }
 /* about header */
 #about > h2 {
@@ -84,8 +81,30 @@ body {
   text-underline-offset: 10px;
 }
 
-/* about p */
+/* attempt at animating with css */
 
+/* hide content */
+.paragraph,
+.list {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out, opacity 0.4s ease-out;
+}
 
+/* show on hover */
+.about-me-container:hover .paragraph,
+.about-me-container:hover .list {
+  max-height: 1000px; /* Large enough to accommodate content */
+  
+}
 
+/* LEFT SIDE */
 
+.why-me-container {
+  display: flex;
+  flex-direction: column;
+  border: var(--border-debug);
+  margin-top: 5rem;
+  text-align: justify;
+  margin-top: 33%;
+}
